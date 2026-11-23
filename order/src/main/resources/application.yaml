@@ -1,20 +1,7 @@
 spring:
   application:
     name: order-service
-  datasource:
-    url: jdbc:postgresql://localhost:5432/orderdb
-    username: embarkx
-    password: embarkx
-  jpa:
-    database: POSTGRESQL
-    show-sql: true
-    hibernate:
-          ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    properties:
-      hibernate:
-        jdbc:
-          time_zone: Asia/Ho_Chi_Minh
-
-server:
-  port: 8083
+  config:
+    import:
+      - optional:file:.env[.properties]
+      - optional:configserver:http://localhost:8888

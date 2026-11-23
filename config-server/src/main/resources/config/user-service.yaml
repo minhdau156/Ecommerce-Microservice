@@ -1,0 +1,21 @@
+spring:
+  mongodb:
+    uri: ${MONGODB_URI}
+    database: ${MONGODB_DATABASE}
+  # datasource:
+  #   url: jdbc:postgresql://localhost:5432/userdb
+  #   username: embarkx
+  #   password: embarkx
+  # jpa:
+  #   database: POSTGRESQL
+  #   show-sql: true
+  #   hibernate:
+  #         ddl-auto: update
+  #   database-platform: org.hibernate.dialect.PostgreSQLDialect
+  #   properties:
+  #     hibernate:
+  #       jdbc:
+  #         time_zone: Asia/Ho_Chi_Minh
+
+server:
+  port: 8082
