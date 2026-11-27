@@ -12,7 +12,8 @@ spring:
     config:
       server:
         native:
-          search-locations: file:///C:\ecom-microservices\config-server\src\main\resources\config
+          # Override with CONFIG_PATH (e.g. in Docker). Defaults cover running from the repo root or from config-server/.
+          search-locations: ${CONFIG_PATH:file:./config-server/src/main/resources/config/,file:./src/main/resources/config/}
 server:
   port: 8888
 
